@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết sản phẩm - GEAR ZONE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+    <div id="detail-content" class="max-w-6xl mx-auto p-10 mt-10 grid md:grid-cols-2 gap-20">
+        </div>
+
+    <script src="products.js"></script>
+    <script>
+        const productId = localStorage.getItem('selectedProductId');
+        const product = products.find(p => p.id == productId);
+
+        if (product) {
+            document.getElementById('detail-content').innerHTML = `
+                <div class="bg-gray-100 rounded-[40px] p-20">
+                    <img src="${product.image}" class="w-full h-auto">
+                </div>
+                <div>
+                    <p class="text-orange-500 font-bold uppercase mb-4">${product.brand}</p>
+                    <h1 class="text-5xl font-black uppercase italic mb-6">${product.name}</h1>
+                    <p class="text-3xl font-black text-red-600 mb-10">${new Intl.NumberFormat('vi-VN').format(product.price)}đ</p>
+                    
+                    <div class="space-y-4 mb-10">
+                        <div class="p-4 border rounded-xl flex items-center gap-4">
+                            <i class="fa-solid fa-shield-check"></i> Bảo hành chính hãng 24 tháng
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="alert('Checking Session...')" class="bg-red-600 text-white py-4 rounded-xl font-bold uppercase">Mua Ngay</button>
+                        <button class="border border-red-600 text-red-600 py-4 rounded-xl font-bold uppercase">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
