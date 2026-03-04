@@ -1,0 +1,49 @@
+// Hàm để định dạng tiền tệ (VD: 890000 -> 890.000đ)
+function formatCurrency(number) {
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(number);
+}
+
+// Hàm hiển thị sản phẩm
+function displayProducts() {
+    const productGrid = document.getElementById('product-grid');
+    
+    // Xóa nội dung cũ (nếu có)
+    productGrid.innerHTML = '';
+
+    // Lặp qua mảng products từ file products.js của bạn
+    products.forEach(product => {
+        const productHTML = `
+            <div class="bg-white p-5 rounded-[40px] shadow-sm border border-gray-100 group hover:shadow-xl transition-all duration-300" data-aos="fade-up">
+                <div class="bg-[#F3F4F6] rounded-[30px] p-8 relative overflow-hidden aspect-square flex items-center justify-center">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
+                    
+                    <div class="absolute top-4 left-4 bg-white/80 backdrop-blur px-3 py-1 rounded-full text-[10px] font-black uppercase text-zinc-500 border border-gray-100">
+                        ${product.brand}
+                    </div>
+
+                    <button onclick="addToCart(${product.id})" class="absolute bottom-4 right-4 bg-black text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition shadow-xl">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+                
+                <div class="mt-6 px-2">
+                    <h4 class="font-extrabold text-lg uppercase italic leading-tight h-12 overflow-hidden line-clamp-2">
+                        ${product.name}
+                    </h4>
+                    <p class="text-2xl font-black mt-3 text-zinc-900">
+                        ${formatCurrency(product.price)}
+                    </p>
+                </div>
+            </div>
+        `;
+        productGrid.innerHTML += productHTML;
+    });
+}
+
+// Giả lập logic bảo mật khi click mua hàng
+function addToCart(id) {
+    alert(`Đang kiểm tra Session... \nSản phẩm ID: ${id} đã được thêm vào giỏ hàng an toàn theo mô hình Zero Trust.`);
+}
+
+// Chạy hàm khi trang web tải xong
+document.addEventListener('DOMContentLoaded', displayProducts);
