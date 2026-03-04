@@ -9,170 +9,129 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); }
-        .product-hover:hover img { transform: scale(1.1); transition: 0.4s; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; scroll-behavior: smooth; }
+        .product-card:hover img { transform: scale(1.1); transition: 0.4s; }
+        .glass-header { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .bg-gear-gradient { background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); }
     </style>
 </head>
-<body class="bg-[#F8F9FA] text-zinc-900">
+<body class="overflow-x-hidden">
 
-    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-lg border-b border-gray-100">
+    <header class="glass-header sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-extrabold italic tracking-tighter">GEAR ZONE</div>
-            <nav class="hidden lg:flex space-x-8 font-bold text-[13px] uppercase tracking-wider">
-                <a href="#" class="hover:text-orange-500">Chuột Gaming</a>
-                <a href="#" class="hover:text-orange-500">Bàn Phím</a>
-                <a href="#" class="hover:text-orange-500">Tai Nghe</a>
-                <a href="#" class="hover:text-orange-500">Ghế Gaming</a>
-                <a href="#" class="hover:text-orange-500">Pad Chuột</a>
+            <div class="text-2xl font-black tracking-tighter italic uppercase">GEAR ZONE</div>
+            <nav class="hidden lg:flex space-x-8 font-bold text-[13px] uppercase tracking-widest text-zinc-600">
+                <a href="#" class="hover:text-black transition">Chuột Gaming</a>
+                <a href="#" class="hover:text-black transition">Bàn Phím</a>
+                <a href="#" class="hover:text-black transition">Tai Nghe</a>
+                <a href="#" class="hover:text-black transition">Ghế Gaming</a>
+                <a href="#" class="hover:text-black transition">Pad Chuột</a>
             </nav>
             <div class="flex items-center space-x-6">
                 <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
-                <button class="bg-black text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-black/10 hover:scale-105 transition">Đăng Nhập</button>
+                <div class="relative cursor-pointer"><i class="fa-solid fa-cart-shopping"></i></div>
+                <button class="bg-black text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-xl hover:scale-105 transition">Đăng Nhập</button>
             </div>
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto pt-20 pb-24 px-6 grid lg:grid-cols-2 gap-16 items-center">
-        <div data-aos="fade-up">
-            <div class="flex items-center space-x-2 text-orange-500 font-bold text-xs uppercase mb-6">
-                <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
-                <span>Gear chuyên nghiệp - Chính hãng 100%</span>
-            </div>
-            <h1 class="text-[80px] leading-[0.9] font-black tracking-tighter uppercase mb-8">Nâng Cấp <br> Setup <br> Của Bạn</h1>
-            <p class="text-gray-500 text-lg max-w-md leading-relaxed mb-10">Khám phá bộ sưu tập gaming gear cao cấp. Tất cả lớp bảo mật Zero Trust được tích hợp sẵn.</p>
-            <div class="flex space-x-4">
-                <button class="bg-black text-white px-10 py-5 rounded-full font-extrabold text-sm hover:bg-zinc-800 transition shadow-2xl">KHÁM PHÁ NGAY →</button>
-                <button class="bg-white border border-gray-200 px-10 py-5 rounded-full font-extrabold text-sm">XEM SẢN PHẨM</button>
-            </div>
-            <div class="flex space-x-12 mt-16 border-t pt-10">
-                <div><p class="text-3xl font-black">10K+</p><p class="text-gray-400 text-[10px] font-bold uppercase">Khách hàng</p></div>
-                <div><p class="text-3xl font-black">500+</p><p class="text-gray-400 text-[10px] font-bold uppercase">Sản phẩm</p></div>
-                <div><p class="text-3xl font-black">4.9★</p><p class="text-gray-400 text-[10px] font-bold uppercase">Đánh giá</p></div>
-            </div>
-        </div>
-        <div class="relative" data-aos="zoom-in">
-            <div class="bg-white p-6 rounded-[40px] shadow-2xl overflow-hidden group">
-                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1000" class="w-full h-auto rounded-[30px] group-hover:scale-105 transition duration-700">
-                <div class="absolute top-10 -left-8 bg-white/90 backdrop-blur p-4 rounded-2xl shadow-xl flex items-center space-x-3 border border-white">
-                    <div class="bg-orange-100 p-3 rounded-xl text-orange-500"><i class="fa-solid fa-shield-halved"></i></div>
-                    <div><p class="font-bold text-xs text-black uppercase">Chính hãng</p><p class="text-[10px] text-gray-500">Bảo hành 24 tháng</p></div>
+    <section class="bg-gear-gradient pt-16 pb-24 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+            <div data-aos="fade-right">
+                <span class="text-orange-500 font-bold text-xs uppercase flex items-center mb-6">
+                    <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span> Gear chuyên nghiệp - Chính hãng 100%
+                </span>
+                <h1 class="text-[85px] leading-[0.9] font-black tracking-tighter uppercase mb-8">NÂNG CẤP <br> SETUP <br> CỦA BẠN</h1>
+                <p class="text-zinc-500 text-lg max-w-md mb-10 leading-relaxed">Khám phá bộ sưu tập gaming gear và phụ kiện máy tính cao cấp. Từ chuột, bàn phím đến ghế ergonomic.</p>
+                <div class="flex space-x-4">
+                    <button class="bg-black text-white px-10 py-5 rounded-full font-black text-sm shadow-2xl">KHÁM PHÁ NGAY →</button>
+                    <button class="bg-white border border-zinc-200 px-10 py-5 rounded-full font-black text-sm">XEM SẢN PHẨM</button>
                 </div>
-                <div class="absolute bottom-10 -right-8 bg-white/90 backdrop-blur p-4 rounded-2xl shadow-xl flex items-center space-x-3 border border-white">
-                    <div class="bg-blue-100 p-3 rounded-xl text-blue-500"><i class="fa-solid fa-truck-fast"></i></div>
-                    <div><p class="font-bold text-xs text-black uppercase">Giao hàng</p><p class="text-[10px] text-gray-500">Toàn quốc & Miễn phí</p></div>
+            </div>
+            <div class="relative" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?w=800" class="rounded-[40px] shadow-2xl">
+                <div class="absolute top-10 -left-10 bg-white p-5 rounded-2xl shadow-xl flex items-center space-x-4 border border-zinc-50">
+                    <div class="bg-orange-100 p-3 rounded-xl text-orange-500"><i class="fa-solid fa-shield-halved text-xl"></i></div>
+                    <div><p class="font-black text-xs uppercase">Chính hãng</p><p class="text-[10px] text-zinc-400">Bảo hành 24 tháng</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-20" data-aos="fade-up">
-        <h2 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em] mb-4">Danh mục sản phẩm</h2>
-        <h3 class="text-4xl font-black italic mb-12">TẤT CẢ GEAR BẠN CẦN</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-zinc-900 text-white p-10 rounded-[35px] h-[300px] relative overflow-hidden group cursor-pointer shadow-xl">
-                <h4 class="text-2xl font-extrabold italic">Chuột Gaming</h4>
-                <p class="text-zinc-400 text-xs mt-2 uppercase tracking-widest">DPI cao, cảm biến chính xác</p>
-                <img src="https://m.media-amazon.com/images/I/61UxfXTUyvL.jpg" class="absolute -right-4 -bottom-4 w-48 group-hover:rotate-6 transition">
-            </div>
-            <div class="bg-zinc-100 p-10 rounded-[35px] h-[300px] relative overflow-hidden group cursor-pointer border border-gray-200 shadow-sm">
-                <h4 class="text-2xl font-extrabold italic">Bàn Phím Cơ</h4>
-                <p class="text-zinc-400 text-xs mt-2 uppercase tracking-widest">Thiết kế nhỏ gọn, switch tốt</p>
-                <img src="https://m.media-amazon.com/images/I/719pM7vS5XL.jpg" class="absolute -right-4 -bottom-4 w-52 group-hover:scale-110 transition">
-            </div>
-            <div class="bg-zinc-100 p-10 rounded-[35px] h-[300px] relative overflow-hidden group cursor-pointer border border-gray-200 shadow-sm">
-                <h4 class="text-2xl font-extrabold italic">Ghế Gaming</h4>
-                <p class="text-zinc-400 text-xs mt-2 uppercase tracking-widest">Thiết kế Ergonomic</p>
-                <img src="https://m.media-amazon.com/images/I/61H7V+K2-CL._AC_UF1000,1000_QL80_.jpg" class="absolute -right-4 -bottom-4 w-44 group-hover:-translate-y-4 transition">
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-7xl mx-auto px-6 py-20" data-aos="fade-up">
+    <section class="max-w-7xl mx-auto px-6 py-24">
         <div class="flex justify-between items-end mb-12">
             <div>
-                <h2 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em] mb-4">Sản phẩm nổi bật</h2>
-                <h3 class="text-4xl font-black italic">BEST SELLERS</h3>
+                <p class="text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-3">Sản phẩm nổi bật</p>
+                <h2 class="text-4xl font-black italic uppercase">Best Sellers</h2>
             </div>
-            <div class="flex space-x-6 text-[10px] font-black uppercase tracking-widest">
-                <span class="border-b-2 border-black pb-1 cursor-pointer">Tất cả</span>
-                <span class="text-gray-400 cursor-pointer hover:text-black transition">Chuột</span>
-                <span class="text-gray-400 cursor-pointer hover:text-black transition">Bàn phím</span>
+            <div class="flex space-x-6 text-[10px] font-black uppercase tracking-widest text-zinc-400">
+                <button onclick="filterBrand('all')" class="text-black border-b-2 border-black pb-1">Tất cả</button>
+                <button onclick="filterBrand('Razer')" class="hover:text-black transition">Razer</button>
+                <button onclick="filterBrand('Logitech')" class="hover:text-black transition">Logitech</button>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-5 rounded-[40px] shadow-sm border border-gray-100 group product-hover">
-                <div class="bg-[#F3F4F6] rounded-[30px] p-12 relative overflow-hidden">
-                    <img src="https://m.media-amazon.com/images/I/61UxfXTUyvL.jpg" class="w-full">
-                    <div class="absolute top-4 left-4 bg-orange-500 text-white text-[8px] px-3 py-1 rounded-full font-black uppercase">Bán chạy</div>
-                    <button class="absolute bottom-4 right-4 bg-black text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition shadow-xl"><i class="fa-solid fa-cart-shopping"></i></button>
-                </div>
-                <div class="mt-6 px-2">
-                    <h4 class="font-extrabold text-xl uppercase italic">Chuột Wireless Gaming</h4>
-                    <p class="text-gray-400 text-[10px] font-bold uppercase mt-1 tracking-widest">Không dây 2.4Ghz, 26K DPI</p>
-                    <p class="text-2xl font-black mt-3">1.590.000đ</p>
-                </div>
-            </div>
-            <div class="bg-white p-5 rounded-[40px] shadow-sm border border-gray-100 group product-hover">
-                <div class="bg-[#F3F4F6] rounded-[30px] p-12 relative">
-                    <img src="https://m.media-amazon.com/images/I/719pM7vS5XL.jpg" class="w-full">
-                    <button class="absolute bottom-4 right-4 bg-black text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition shadow-xl"><i class="fa-solid fa-cart-shopping"></i></button>
-                </div>
-                <div class="mt-6 px-2">
-                    <h4 class="font-extrabold text-xl uppercase italic">Bàn phím TKL Compact</h4>
-                    <p class="text-gray-400 text-[10px] font-bold uppercase mt-1 tracking-widest">RGB, Hotswap, Gasket Mount</p>
-                    <p class="text-2xl font-black mt-3">1.790.000đ</p>
+
+        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+    </section>
+
+    <section class="bg-zinc-50 py-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-[40px] shadow-sm border border-zinc-100" data-aos="fade-up">
+                <div class="flex text-orange-500 mb-6"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-zinc-600 italic mb-8 italic">"Mình mua bộ combo chuột bàn phím ở đây, chất lượng vượt mong đợi. RGB đẹp, phản hồi nhanh!"</p>
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-zinc-200 rounded-full"></div>
+                    <div><p class="font-bold text-sm">Lê Hữu Đạt</p><p class="text-[10px] text-zinc-400 uppercase">Gamer</p></div>
                 </div>
             </div>
-            <div class="bg-white p-5 rounded-[40px] shadow-sm border border-gray-100 group product-hover">
-                <div class="bg-[#F3F4F6] rounded-[30px] p-12 relative">
-                    <img src="https://m.media-amazon.com/images/I/61NfT6Yv7IL._AC_UF1000,1000_QL80_.jpg" class="w-full">
-                    <div class="absolute top-4 left-4 bg-zinc-900 text-white text-[8px] px-3 py-1 rounded-full font-black uppercase">Mới</div>
-                    <button class="absolute bottom-4 right-4 bg-black text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition shadow-xl"><i class="fa-solid fa-cart-shopping"></i></button>
-                </div>
-                <div class="mt-6 px-2">
-                    <h4 class="font-extrabold text-xl uppercase italic">Tai nghe Wireless Premium</h4>
-                    <p class="text-gray-400 text-[10px] font-bold uppercase mt-1 tracking-widest">Bluetooth 5.0, Pin 30h</p>
-                    <p class="text-2xl font-black mt-3">2.490.000đ</p>
-                </div>
             </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-20" data-aos="zoom-in-up">
+        <div class="bg-zinc-900 rounded-[50px] p-16 text-white relative overflow-hidden flex flex-col items-center text-center">
+            <h2 class="text-5xl font-black italic uppercase mb-6">Giảm Giá 50%</h2>
+            <p class="text-zinc-400 mb-10 max-w-lg uppercase tracking-widest text-sm font-bold underline">Cho bộ Combo Gaming đầu tiên</p>
+            <button class="bg-white text-black px-12 py-5 rounded-full font-black text-sm uppercase shadow-xl hover:bg-orange-500 hover:text-white transition">Mua Combo Ngay →</button>
         </div>
     </section>
 
-    <footer class="bg-zinc-900 text-white pt-20 pb-10 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-4 gap-12 mb-20">
-                <div class="col-span-2">
-                    <h2 class="text-3xl font-black italic mb-6">GEAR ZONE</h2>
-                    <p class="text-zinc-500 text-sm max-w-sm leading-relaxed">Hệ thống phân phối Gear chính hãng. Tích hợp giải pháp bảo mật đa lớp Zero Trust cho mọi giao dịch.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest">Sản phẩm</h4>
-                    <ul class="text-zinc-500 text-sm space-y-3">
-                        <li class="hover:text-white cursor-pointer transition">Chuột Gaming</li>
-                        <li class="hover:text-white cursor-pointer transition">Bàn Phím Cơ</li>
-                        <li class="hover:text-white cursor-pointer transition">Tai Nghe</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest">Liên hệ</h4>
-                    <p class="text-zinc-500 text-sm">123 Nguyễn Huệ, TP.HCM</p>
-                    <p class="text-zinc-500 text-sm mt-3">support@gearzone.vn</p>
-                </div>
-            </div>
-            <div class="border-t border-zinc-800 pt-8 flex justify-between items-center text-[10px] text-zinc-600 font-bold uppercase tracking-widest">
-                <p>© 2026 Gear Zone. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <span>Security Verified</span>
-                    <span>Zero Trust Active</span>
-                </div>
-            </div>
+    <footer class="bg-white pt-20 pb-10 px-6 border-t border-zinc-100 text-center">
+        <div class="text-2xl font-black italic uppercase mb-8 tracking-tighter">GEAR ZONE</div>
+        <div class="flex justify-center space-x-10 text-[10px] font-bold text-zinc-400 uppercase tracking-[0.3em] mb-12">
+            <a href="#">Bảo mật</a><a href="#">Bảo hành</a><a href="#">Liên hệ</a>
         </div>
+        <p class="text-zinc-300 text-[10px] uppercase font-bold">© 2026 Gear Zone - Dự án tốt nghiệp bảo mật Zero Trust</p>
     </footer>
 
+    <script src="products.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        function renderUI() {
+            const grid = document.getElementById('product-grid');
+            if (typeof products === 'undefined') return;
+
+            grid.innerHTML = products.slice(0, 12).map(p => `
+                <div class="bg-white p-5 rounded-[45px] border border-zinc-100 shadow-sm product-card group" data-aos="fade-up">
+                    <div class="bg-[#F6F6F8] rounded-[35px] aspect-square flex items-center justify-center p-12 relative overflow-hidden">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-contain transition duration-500" 
+                             onerror="this.src='https://placehold.co/400x400?text=Check+Image+Path'">
+                        <button class="absolute bottom-5 right-5 bg-black text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-orange-500 transition shadow-2xl">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="mt-8 px-2">
+                        <h4 class="font-black text-md uppercase italic leading-tight h-10 overflow-hidden line-clamp-2">${p.name}</h4>
+                        <p class="text-zinc-400 text-[10px] font-bold uppercase mt-2 tracking-widest">${p.brand}</p>
+                        <p class="text-2xl font-black mt-4">${new Intl.NumberFormat('vi-VN').format(p.price)}đ</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderUI();
+            AOS.init({ duration: 1000, once: true });
+        });
     </script>
 </body>
 </html>
